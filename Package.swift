@@ -16,9 +16,6 @@ let package = Package(
             name: "SentryCocoaLumberjack",
             dependencies: [ "Sentry", .product(name: "CocoaLumberjackSwift", package: "CocoaLumberjack")],
             exclude: [ "Example" ]),
-        .testTarget(
-            name: "SentryCocoaLumberjackTests",
-            dependencies: ["SentryCocoaLumberjack"]),
         .target(
             name: "Example",
             dependencies: [

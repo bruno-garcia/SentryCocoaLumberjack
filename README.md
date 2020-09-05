@@ -1,20 +1,46 @@
 # SentryCocoaLumberjack
 
-Send your [`CocoaLumberjack`](https://github.com/CocoaLumberjack/CocoaLumberjack) log messages to Sentry.
+Send your [`CocoaLumberjack`](https://github.com/CocoaLumberjack/CocoaLumberjack) log messages to [Sentry](https://sentry.io).
 
+## Using this library
 
-# Run the example
+Install it with Swift Package Manager
 
-Add your DSN to [Example/main.swift](Example/main.swift).
+```swift
+.package(url: "https://github.com/bruno-garcia/SentryCocoaLumberjack", from: "0.0.1-alpha.0")
+```
+
+Add the Sentry logger to your app:
+
+```swift
+let sentryLogger = SentryLogger()
+DDLog.add(sentryLogger, with: DDLogLevel.info)
+```
+
+Done. All log messages with level `info` or higher will be stored as breadcrumbs.
+Logs with level `error` send an event to Sentry, which include the breadcrumbs.
+
+These log levels can be configured. Check out the [example console app in this repo](Example/main.swift).
+
+## Run the example
+
+First add your DSN to [Example/main.swift](Example/main.swift).
 
 Run it:
+
 ```sh
 swift run
 
-2020-09-05 17:03:52:724 Example[36493:4387558] Initializing the Sentry SDK
-2020-09-05 17:03:52:731 Example[36493:4387558] 🔊 Noise message again: Something trivial happened.
-2020-09-05 17:03:52:731 Example[36493:4387558] 🌍 You might want to look into this if something's weird.
-2020-09-05 17:03:52:731 Example[36493:4387558] 🪓🌴 Something relevant happened. Always be aware.
-2020-09-05 17:03:52:731 Example[36493:4387558] 🍁 Warning! This isn't good.
-2020-09-05 17:03:52:731 Example[36493:4387558] 🔥 Broken stuff! Please fix this!
+2020-09-05 20:39:59:741 Example[74424:4634517] 🔊 Noise message again: Something trivial.
+2020-09-05 20:39:59:741 Example[74424:4634517] 🌍 Check this out, something's weird.
+2020-09-05 20:39:59:741 Example[74424:4634517] 🪓🌴 Something relevant happened. Be aware.
+2020-09-05 20:39:59:741 Example[74424:4634517] 🍁 Warning! This isn't good.
+2020-09-05 20:39:59:741 Example[74424:4634517] 🔥 Broken stuff! Please fix this!
 ```
+
+The example is configured with custom minimum levels so you can see `info`, `warning` and `error` level events sent to Sentry. 
+All levels are stored as breadcrumbs.
+
+## A low quality `gif` to give you an idea
+
+![Running the example](.github/sentry-cocoalumberjack.gif)
