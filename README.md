@@ -7,7 +7,7 @@ Send your [`CocoaLumberjack`](https://github.com/CocoaLumberjack/CocoaLumberjack
 Install it with Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/bruno-garcia/SentryCocoaLumberjack", from: "0.0.1-alpha.0")
+.package(url: "https://github.com/bruno-garcia/SentryCocoaLumberjack", from: "0.0.1-alpha.2")
 ```
 
 Add the Sentry logger to your app:
