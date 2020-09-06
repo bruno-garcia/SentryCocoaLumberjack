@@ -1,0 +1,20 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    name: Build with Swift ${{ matrix.swift }}
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        swift: ['5.1', '5.2']
+    steps:
+      - uses: actions/checkout@v2
+      - uses: YOCKOW/Action-setup-swift@v1.1.4
+        with:
+          swift-version: ${{ matrix.swift }}
+      - run: swift build -v
+      - run: swift run -v

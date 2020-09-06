@@ -1,5 +1,9 @@
 # SentryCocoaLumberjack
 
+[![build](https://github.com/bruno-garcia/SentryCocoaLumberjack/workflows/build/badge.svg?branch=main)](https://github.com/bruno-garcia/SentryCocoaLumberjack/actions?query=branch%3Amain)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbruno-garcia%2FSentryCocoaLumberjack%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/bruno-garcia/SentryCocoaLumberjack)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbruno-garcia%2FSentryCocoaLumberjack%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/bruno-garcia/SentryCocoaLumberjack)
+
 Send your [`CocoaLumberjack`](https://github.com/CocoaLumberjack/CocoaLumberjack) log messages to [Sentry](https://sentry.io).
 
 ## Using this library
@@ -7,7 +11,7 @@ Send your [`CocoaLumberjack`](https://github.com/CocoaLumberjack/CocoaLumberjack
 Install it with Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/bruno-garcia/SentryCocoaLumberjack", from: "0.0.1-alpha.0")
+.package(url: "https://github.com/bruno-garcia/SentryCocoaLumberjack", from: "0.0.1-alpha.2")
 ```
 
 Add the Sentry logger to your app:
