@@ -1,5 +1,9 @@
 # SentryCocoaLumberjack
 
+[![build](https://github.com/bruno-garcia/SentryCocoaLumberjack/workflows/build/badge.svg?branch=main)](https://github.com/bruno-garcia/SentryCocoaLumberjack/actions?query=branch%3Amain)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbruno-garcia%2FSentryCocoaLumberjack%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/bruno-garcia/SentryCocoaLumberjack)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbruno-garcia%2FSentryCocoaLumberjack%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/bruno-garcia/SentryCocoaLumberjack)
+
 Send your [`CocoaLumberjack`](https://github.com/CocoaLumberjack/CocoaLumberjack) log messages to [Sentry](https://sentry.io).
 
 ## Using this library
@@ -22,6 +26,10 @@ Logs with level `error` send an event to Sentry, which include the breadcrumbs.
 
 These log levels can be configured. Check out the [example console app in this repo](Example/main.swift).
 
+## A low quality `gif` to give you an idea
+
+![Running the example](.github/sentry-cocoalumberjack.gif)
+
 ## Run the example
 
 First add your DSN to [Example/main.swift](Example/main.swift).
@@ -40,7 +48,3 @@ swift run
 
 The example is configured with custom minimum levels so you can see `info`, `warning` and `error` level events sent to Sentry. 
 All levels are stored as breadcrumbs.
-
-## A low quality `gif` to give you an idea
-
-![Running the example](.github/sentry-cocoalumberjack.gif)

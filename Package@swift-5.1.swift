@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.1
 
 import PackageDescription
 
@@ -10,7 +10,7 @@ let package = Package(
     products: [.library(name: "SentryCocoaLumberjack",
                     targets: ["SentryCocoaLumberjack"])],
     dependencies: [
-        .package(name: "Sentry", url: "https://github.com/getsentry/sentry-cocoa", from: "5.2.2"),
+        .package(url: "https://github.com/getsentry/sentry-cocoa", from: "5.2.2"),
         .package(url: "https://github.com/CocoaLumberjack/CocoaLumberjack", from: "3.6.2")
     ],
     targets: [
